@@ -1,5 +1,9 @@
 # dj-x-supercharged
 
+<p align="center">
+  <img src="docs/logo-hero.jpg" alt="dj-x-supercharged — Spotify on one ear, X on the other" width="540" />
+</p>
+
 > **Turn what you scroll into what you stream.**
 >
 > X (Twitter) is where culture moves in real time — what artists drop, what your friends rave about, what the world is talking about. Spotify is where you actually listen. They've never spoken to each other. **dj-x-supercharged closes that loop.** Your liked tweets, your top artists' posts, your X "For You" interests — all turned into Spotify playlists and podcast picks that match what you're already paying attention to. Every doom-scroll becomes a playlist. Every clip becomes an episode. The two halves of how you spend your day, finally connected.
