@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>dj-x-supercharged · OAuth callback</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 38rem; margin: 4rem auto; padding: 0 1.5rem; color: #111; line-height: 1.5; }
+    code { background: #f3f4f6; padding: 0.15rem 0.35rem; border-radius: 4px; font-family: ui-monospace, monospace; }
+    .box { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem; margin: 1.5rem 0; word-break: break-all; }
+    button { background: #111; color: #fff; border: 0; padding: 0.6rem 1rem; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+    button:hover { background: #333; }
+    .err { color: #b91c1c; }
+  </style>
+</head>
+<body>
+  <h1>dj-x-supercharged</h1>
+  <p>OAuth callback received. Copy the code below and paste it into your terminal.</p>
+
+  <div class="box">
+    <strong>Authorization code:</strong>
+    <pre id="code">…</pre>
+    <button id="copy">Copy code</button>
+  </div>
+
+  <p id="state" style="color:#6b7280"></p>
+  <p id="error" class="err"></p>
+
+  <p>You can close this tab when done.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const state = params.get("state");
+    const err = params.get("error");
+
+    document.getElementById("code").textContent = code || "(no code in URL)";
+    if (state) document.getElementById("state").textContent = "state: " + state;
+    if (err) document.getElementById("error").textContent = "error: " + err;
+
+    document.getElementById("copy").addEventListener("click", () => {
+      if (code) navigator.clipboard.writeText(code);
+    });
+  </script>
+</body>
+</html>

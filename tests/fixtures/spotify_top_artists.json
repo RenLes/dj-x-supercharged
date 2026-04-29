@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "1uNFoZAHBGtllmzznpCI3s",
+      "name": "Justin Bieber",
+      "genres": ["pop", "canadian pop"]
+    },
+    {
+      "id": "06HL4z0CvFAxyc27GXpf02",
+      "name": "Taylor Swift",
+      "genres": ["pop"]
+    },
+    {
+      "id": "3TVXtAsR1Inumwj472S9r4",
+      "name": "Drake",
+      "genres": ["hip hop", "rap"]
+    }
+  ]
+}
